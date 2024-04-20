@@ -2,10 +2,10 @@
 
 1.  **Set Up Next.js Project**
 
-- [ ]  Set up project structure.
-- [ ]  Install necessary dependencies.
-- [ ]  Set up typography and global styles.
-- [ ]  Set up Recoil for state management.
+- [x]  Set up project structure.
+- [x]  Install necessary dependencies.
+- [x]  Set up typography and global styles.
+- [x]  Set up Recoil for state management.
 1.  **Create Components**
     
 - [ ]  Create `ProductList` component.
