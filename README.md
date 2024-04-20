@@ -3,12 +3,15 @@
 1.  **Set Up Next.js Project**
 
 - [ ]  Set up project structure.
+- [ ]  Install necessary dependencies.
+- [ ]  Set up typography and global styles.
 1.  **Create Components**
     
 - [ ]  Create `ProductList` component.
 - [ ]  Create `NavBar` component.
 - [ ]  Create `Footer` component.
 - [ ]  Create `AuthenticationForm` component.
+- [ ]  Create `Product` component.
 - [ ]  Create `Cart` component.
 3.  **Fetch Data**
     
@@ -36,3 +39,10 @@
 - [ ]  Deploy the application to Vercel.
 - [ ]  Set up CI/CD pipeline.
 
+9. **SEO Optimization**
+- [ ]  Create a dynamic sitemap.
+- [ ]  Implement meta tags for each page.
+- [ ]  Optimize images and other assets.
+- [ ]  Create a robots.txt file.
+- [ ]  Render pages on the server for better SEO.
+ 
