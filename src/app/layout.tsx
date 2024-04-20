@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Domine, Poppins } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import RecoilProvider from '@/providers/RecoilProvider';
 
 const domine = Domine({ subsets: ['latin'], variable: '--domine' });
 const poppins = Poppins({
@@ -35,7 +36,7 @@ export default function RootLayout({
           poppins.variable
         )}
       >
-        {children}
+        <RecoilProvider>{children}</RecoilProvider>
       </body>
     </html>
   );

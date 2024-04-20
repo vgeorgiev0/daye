@@ -5,6 +5,7 @@
 - [ ]  Set up project structure.
 - [ ]  Install necessary dependencies.
 - [ ]  Set up typography and global styles.
+- [ ]  Set up Recoil for state management.
 1.  **Create Components**
     
 - [ ]  Create `ProductList` component.
@@ -15,8 +16,8 @@
 - [ ]  Create `Cart` component.
 3.  **Fetch Data**
     
-- [ ]  Fetch product data from the provided API.
-- [ ]  Handle XML responses and parse them appropriately.
+- [x]  Fetch product data from the provided API.
+- [x]  Handle XML responses and parse them appropriately.
 4.  **Display Products**
     
 - [ ]  Display products fetched from the API.
