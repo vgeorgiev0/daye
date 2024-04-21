@@ -4,6 +4,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import RecoilProvider from '@/providers/RecoilProvider';
 import Navbar from '@/components/nav/Navbar';
+import Footer from '@/components/footer/Footer';
 
 const domine = Domine({ subsets: ['latin'], variable: '--domine' });
 
@@ -47,6 +48,7 @@ export default function RootLayout({
         <RecoilProvider>
           <Navbar />
           {children}
+          <Footer />
         </RecoilProvider>
       </body>
     </html>

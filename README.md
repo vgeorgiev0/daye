@@ -10,7 +10,7 @@
     
 - [ ]  Create `ProductList` component.
 - [x]  Create `NavBar` component.
-- [ ]  Create `Footer` component.
+- [x]  Create `Footer` component.
 - [ ]  Create `AuthenticationForm` component.
 - [ ]  Create `Product` component.
 - [ ]  Create `Cart` component.
