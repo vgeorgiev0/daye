@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const config = {
   darkMode: ['class'],
@@ -14,6 +13,7 @@ const config = {
     fontFamily: {
       domine: ['var(--domine)'],
       poppins: ['var(--poppins)'],
+      saira: ['var(--font-saira)'],
     },
     container: {
       center: true,
@@ -29,6 +29,7 @@ const config = {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        pink: 'hsl(var(--pink))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',

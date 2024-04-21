@@ -9,7 +9,7 @@
 1.  **Create Components**
     
 - [ ]  Create `ProductList` component.
-- [ ]  Create `NavBar` component.
+- [x]  Create `NavBar` component.
 - [ ]  Create `Footer` component.
 - [ ]  Create `AuthenticationForm` component.
 - [ ]  Create `Product` component.
@@ -37,8 +37,8 @@
 - [ ]  Persist cart data for each user.
 8.  **Deployment**
     
-- [ ]  Deploy the application to Vercel.
-- [ ]  Set up CI/CD pipeline.
+- [x]  Deploy the application to Vercel.
+- [x]  Set up CI/CD pipeline.
 
 9. **SEO Optimization**
 - [ ]  Create a dynamic sitemap.
