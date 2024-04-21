@@ -1,14 +1,21 @@
 import type { Metadata, Viewport } from 'next';
-import { Domine, Poppins } from 'next/font/google';
+import { Domine, Poppins, Saira } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import RecoilProvider from '@/providers/RecoilProvider';
+import Navbar from '@/components/nav/Navbar';
 
 const domine = Domine({ subsets: ['latin'], variable: '--domine' });
+
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: '400',
+  weight: '500',
   variable: '--poppins',
+});
+
+const saira = Saira({
+  subsets: ['latin'],
+  variable: '--font-saira',
 });
 
 export const metadata: Metadata = {
@@ -31,12 +38,16 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          'min-h-screen bg-background font-poppins antialiased text-black',
+          'min-h-screen bg-background font-saira antialiased text-black',
           domine.variable,
-          poppins.variable
+          poppins.variable,
+          saira.variable
         )}
       >
-        <RecoilProvider>{children}</RecoilProvider>
+        <RecoilProvider>
+          <Navbar />
+          {children}
+        </RecoilProvider>
       </body>
     </html>
   );
