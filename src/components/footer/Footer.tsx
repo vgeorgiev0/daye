@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <FooterNav />
-      <div className='relative mt-16 border-t border-green-200 text-white bg-secondary'>
+      <div className='relative border-t border-green-200 text-white bg-secondary'>
         <div className='container flex flex-col lg:flex-row items-center justify-between gap-10 py-10'>
           <div className='flex items-center flex-nowrap gap-2 max-w-64 text-sm text-primary flex-row'>
             <Image src={logo} alt='logo' width={60} height={60} />
