@@ -42,7 +42,7 @@ export default function RootLayout({
       <html lang='en'>
         <body
           className={cn(
-            'min-h-screen bg-background font-saira antialiased text-black',
+            'min-h-screen bg-background font-saira antialiased text-black light',
             domine.variable,
             poppins.variable,
             saira.variable

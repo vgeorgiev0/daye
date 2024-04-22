@@ -82,7 +82,7 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({ menuItem }) => {
               >
                 <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black dark:ring-white ring-opacity-5 dark:ring-opacity-10 text-sm'>
                   <div
-                    className={`absolute w-full flex flex-row items-center justify-evenly bg-background dark:bg-neutral-900 px-3 py-6 `}
+                    className={`absolute w-full flex flex-row items-center justify-evenly bg-background px-3 py-6 `}
                   >
                     {menu.megaMenu?.map((item) => (
                       <div key={item.id}>

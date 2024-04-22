@@ -104,7 +104,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ data, onClickClose }) => {
   };
 
   return (
-    <div className='overflow-y-auto w-full h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-background dark:bg-neutral-900 divide-y-2 divide-neutral-100 dark:divide-neutral-800'>
+    <div className='overflow-y-auto w-full h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-background  divide-y-2 divide-neutral-100 dark:divide-neutral-800'>
       <div className='py-6 px-5 flex flex-row justify-between mt-6'>
         <Image
           src={Logo}
