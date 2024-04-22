@@ -11,7 +11,9 @@
 - [ ]  Create `ProductList` component.
 - [x]  Create `NavBar` component.
 - [x]  Create `Footer` component.
+- [ ]  Create `login` page.
 - [ ]  Create `AuthenticationForm` component.
+- [ ]  Create `product` page.
 - [ ]  Create `Product` component.
 - [ ]  Create `Cart` component.
 3.  **Fetch Data**
