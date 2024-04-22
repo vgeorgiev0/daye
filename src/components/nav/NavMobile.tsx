@@ -6,9 +6,10 @@ import Link from 'next/link';
 import React from 'react';
 
 import ButtonClose from '@/components/ui/shared/ButtonClose';
-// import Logo from '@/components/shared/Logo';
+import Logo from '@/assets/logo.svg';
 
 import { NavItemType } from './NavItem';
+import Image from 'next/image';
 
 export interface NavMobileProps {
   data: NavItemType[];
@@ -74,6 +75,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ data, onClickClose }) => {
           href={{
             pathname: item.href || undefined,
           }}
+          onClick={onClickClose}
         >
           <span
             className={`py-2.5 pr-3 ${!item.children ? 'block w-full' : ''}`}
@@ -102,9 +104,15 @@ const NavMobile: React.FC<NavMobileProps> = ({ data, onClickClose }) => {
   };
 
   return (
-    <div className='overflow-y-auto w-full h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-white dark:bg-neutral-900 divide-y-2 divide-neutral-100 dark:divide-neutral-800'>
+    <div className='overflow-y-auto w-full h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-background dark:bg-neutral-900 divide-y-2 divide-neutral-100 dark:divide-neutral-800'>
       <div className='py-6 px-5 flex flex-row justify-between mt-6'>
-        {/* <Logo /> */}
+        <Image
+          src={Logo}
+          alt='logo'
+          width={60}
+          height={60}
+          className='bg-secondary rounded-full p-2'
+        />
         <span className='absolute right-2 top-2 p-1'>
           <ButtonClose onClick={onClickClose} />
         </span>

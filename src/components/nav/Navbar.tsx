@@ -1,27 +1,11 @@
 'use client';
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { LogIn, SearchIcon, ShoppingBasket } from 'lucide-react';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import MenuBar from './MenuBar';
 import NavigationItem from './NavItem';
 import { NAVIGATION_SCREENS } from './menuData';
-import Link from 'next/link';
-import {
-  LogIn,
-  LogOut,
-  SearchIcon,
-  ShoppingBasket,
-  SignalIcon,
-  User,
-  UserCheck,
-  UserRound,
-} from 'lucide-react';
-import {
-  SignIn,
-  SignInButton,
-  SignOutButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs';
 
 function Navbar() {
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -45,7 +29,7 @@ function Navbar() {
           stickyMenu ? '-top-10' : 'top-0'
         }`}
       >
-        <h2 className='uppercase text-sm tracking-wider'>
+        <h2 className='uppercase text-xs tracking-wide lg:text-sm lg:tracking-wider'>
           our diagnostic tampon is now available at boots! 🔬 💖
         </h2>
       </div>
@@ -111,7 +95,11 @@ function Navbar() {
           </div>
         </ul>
       </div>
-      <div className='flex lg:hidden items-center justify-end'>
+      <div
+        className={`flex ${
+          stickyMenu ? '-top-6' : 'top-0'
+        } lg:hidden relative items-center transition-all justify-end`}
+      >
         <MenuBar />
       </div>
     </header>

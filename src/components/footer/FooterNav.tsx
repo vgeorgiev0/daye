@@ -3,9 +3,25 @@
 import MenuBar from '@/components/nav/MenuBar';
 import { NavItemType } from '@/types/common';
 import { UserCircleIcon } from '@heroicons/react/24/outline';
-import { HomeIcon } from 'lucide-react';
+import { HomeIcon, UserIcon } from 'lucide-react';
 import { useRef } from 'react';
 import FooterNavItem from './FooterNavItem';
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+
+const LoginIcon = () => {
+  return (
+    <>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        <SignInButton>
+          <UserIcon />
+        </SignInButton>
+      </SignedOut>
+    </>
+  );
+};
 
 const MobileNavItem: NavItemType[] = [
   {
@@ -15,9 +31,8 @@ const MobileNavItem: NavItemType[] = [
   },
 
   {
-    name: 'Log in',
-    link: '/login',
-    icon: UserCircleIcon,
+    name: 'User',
+    icon: LoginIcon,
   },
   {
     name: 'Menu',

@@ -21,10 +21,10 @@ const FooterNavItem: React.FC<FooterNavItemProps> = ({ index, item }) => {
         isActive ? 'text-neutral-900 dark:text-neutral-100' : ''
       }`}
     >
-      <item.icon className={`w-6 h-6 ${isActive ? 'text-red-600' : ''}`} />
+      <item.icon className={`w-6 h-6 ${isActive ? 'text-secondary' : ''}`} />
       <span
         className={`text-[11px] leading-none mt-1 ${
-          isActive ? 'text-red-600' : ''
+          isActive ? 'text-secondary' : ''
         }`}
       >
         {item.name}
