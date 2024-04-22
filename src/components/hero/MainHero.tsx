@@ -24,7 +24,7 @@ const MainHero: React.FC<MainHeroProps> = ({}) => {
           'https://images.prismic.io/ecommerce-website/65e202b7676dc480aae07efd_sti_homepage_hero_desktop.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max'
         }
         alt='hero'
-        width={600}
+        width={560}
         height={400}
         className='absolute bottom-0 left-0 right-0 mx-auto'
       />

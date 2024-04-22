@@ -11,7 +11,7 @@ const shopMegaMenuList: MegaMenuItem[] = [
     title: 'Period Care',
     items: __shopMegaMenu.map((i) => ({
       id: ncNanoId(),
-      href: '/',
+      href: '/products',
       name: i.PeriodicCare,
     })),
   },
@@ -22,7 +22,7 @@ const shopMegaMenuList: MegaMenuItem[] = [
     title: 'Vaginal Health',
     items: __shopMegaMenu.map((i) => ({
       id: ncNanoId(),
-      href: '/',
+      href: '/products',
       name: i.VHealth,
     })),
   },
@@ -33,7 +33,7 @@ const shopMegaMenuList: MegaMenuItem[] = [
     title: 'Accessories',
     items: __shopMegaMenu.map((i) => ({
       id: ncNanoId(),
-      href: '/',
+      href: '/products',
       name: i.Accessories,
     })),
   },
@@ -47,7 +47,7 @@ const aboutUsMegaMenuList: MegaMenuItem[] = [
     title: 'Period Care',
     items: __aboutMegaMenu.map((i) => ({
       id: ncNanoId(),
-      href: '/',
+      href: '/products',
       name: i.AboutUs,
     })),
   },
@@ -58,7 +58,7 @@ const aboutUsMegaMenuList: MegaMenuItem[] = [
     title: 'Accessories',
     items: __aboutMegaMenu.map((i) => ({
       id: ncNanoId(),
-      href: '/',
+      href: '/products',
       name: i.Discover,
     })),
   },
@@ -67,26 +67,26 @@ const aboutUsMegaMenuList: MegaMenuItem[] = [
 export const NAVIGATION_SCREENS: NavItemType[] = [
   {
     id: ncNanoId(),
-    href: '/',
+    href: '/products',
     name: 'Shop',
     type: 'megaMenu',
     megaMenu: shopMegaMenuList,
   },
   {
     id: ncNanoId(),
-    href: '/',
+    href: '/products',
     name: 'Period Care',
     type: 'none',
   },
   {
     id: ncNanoId(),
-    href: '/',
+    href: '/products',
     name: 'Vaginal Health',
     type: 'none',
   },
   {
     id: ncNanoId(),
-    href: '/',
+    href: '/products',
     name: 'Period Pain Clinic',
     type: 'none',
   },
