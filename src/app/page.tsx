@@ -3,13 +3,15 @@ import { getDataFromApi } from './actions';
 import { getUsers } from '@/server/db';
 import { ncNanoId } from '@/lib/utils';
 
+export const dynamic = 'force-dynamic';
+// Makes sure that the data is fetched at runtime
+
 export default async function Home() {
   const data = await getDataFromApi();
   const users = await getUsers();
-  // console.log(users, 'users');
 
   return (
-    <main className='mt-10'>
+    <main className='mt-10 lg:mt-32'>
       {users.map((user) => (
         <div key={ncNanoId()} className=''>
           <h1 className=''>{user.name}</h1>
