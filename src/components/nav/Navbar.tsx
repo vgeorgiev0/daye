@@ -46,7 +46,7 @@ function Navbar() {
           </div>
           <Link
             href={'/'}
-            className='px-10 xl:px-24 flex-1 items-center justify-center flex'
+            className='px-10 xl:px-32 flex-1 items-center justify-center flex'
           >
             <svg width='100' height='39' viewBox='0 0 100 39' fill='none'>
               <path
