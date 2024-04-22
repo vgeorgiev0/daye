@@ -9,7 +9,13 @@ export default async function Home() {
   // console.log(users, 'users');
 
   return (
-    <main className=''>
+    <main className='mt-10'>
+      {users.map((user) => (
+        <div key={ncNanoId()} className=''>
+          <h1 className=''>{user.name}</h1>
+          <p className=''>{user.email}</p>
+        </div>
+      ))}
       {data?.map((item, index) => (
         <div key={ncNanoId()} className=''>
           <h1 className=''>{item.currency}</h1>
