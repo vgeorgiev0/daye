@@ -6,6 +6,8 @@ import RecoilProvider from '@/providers/RecoilProvider';
 import Navbar from '@/components/nav/Navbar';
 import Footer from '@/components/footer/Footer';
 
+import { ClerkProvider } from '@clerk/nextjs';
+
 const domine = Domine({ subsets: ['latin'], variable: '--domine' });
 
 const poppins = Poppins({
@@ -36,21 +38,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={cn(
-          'min-h-screen bg-background font-saira antialiased text-black',
-          domine.variable,
-          poppins.variable,
-          saira.variable
-        )}
-      >
-        <RecoilProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </RecoilProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang='en'>
+        <body
+          className={cn(
+            'min-h-screen bg-background font-saira antialiased text-black',
+            domine.variable,
+            poppins.variable,
+            saira.variable
+          )}
+        >
+          <RecoilProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </RecoilProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

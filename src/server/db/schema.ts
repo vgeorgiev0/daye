@@ -7,6 +7,8 @@ import {
   varchar,
 } from 'drizzle-orm/pg-core';
 
+import { sql } from 'drizzle-orm';
+
 export const createTable = pgTableCreator((name) => `daye_${name}`);
 
 export const users = createTable(
@@ -15,6 +17,9 @@ export const users = createTable(
     id: serial('id').primaryKey(),
     name: varchar('name', { length: 256 }),
     email: text('email').notNull(),
+    cart: text('cart')
+      .array()
+      .default(sql`'{}'::text[]`),
     createdAt: timestamp('createdAt').defaultNow().notNull(),
     updatedAt: timestamp('updatedAt'),
   },
@@ -24,3 +29,4 @@ export const users = createTable(
     };
   }
 );
+

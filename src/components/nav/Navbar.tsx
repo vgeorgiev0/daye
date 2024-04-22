@@ -4,7 +4,24 @@ import MenuBar from './MenuBar';
 import NavigationItem from './NavItem';
 import { NAVIGATION_SCREENS } from './menuData';
 import Link from 'next/link';
-import { SearchIcon, ShoppingBasket, UserRound } from 'lucide-react';
+import {
+  LogIn,
+  LogOut,
+  SearchIcon,
+  ShoppingBasket,
+  SignalIcon,
+  User,
+  UserCheck,
+  UserRound,
+} from 'lucide-react';
+import {
+  SignIn,
+  SignInButton,
+  SignOutButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs';
 
 function Navbar() {
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -80,8 +97,16 @@ function Navbar() {
             ))}
             <div className='flex flex-row space-x-2 ml-3 xl:space-x-6 xl:ml-10'>
               <SearchIcon className='cursor-pointer' />
-              <ShoppingBasket className='cursor-pointer' />
-              <UserRound className='cursor-pointer' />
+              <SignedIn>
+                <ShoppingBasket className='cursor-pointer' />
+                <UserButton />
+              </SignedIn>
+
+              <SignedOut>
+                <SignInButton mode='modal'>
+                  <LogIn className='cursor-pointer' />
+                </SignInButton>
+              </SignedOut>
             </div>
           </div>
         </ul>

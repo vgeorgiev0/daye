@@ -12,7 +12,6 @@
 - [x]  Create `NavBar` component.
 - [x]  Create `Footer` component.
 - [ ]  Create `login` page.
-- [ ]  Create `AuthenticationForm` component.
 - [ ]  Create `product` page.
 - [ ]  Create `Product` component.
 - [ ]  Create `Cart` component.
@@ -26,12 +25,12 @@
 - [ ]  Display dummy products (*nice-to-have -|- use a custom backend and fetch products from there).
 5.  **Implement User Authentication**
     
-- [ ]  Integrate user authentication using Clerk.
-- [ ]  Implement login, registration, and logout functionality.
+- [x]  Integrate user authentication using Clerk.
+- [x]  Implement login, registration, and logout functionality.
 6.  **Database Integration**
     
-- [ ]  Set up a database for storing user data and product information.
-- [ ]  Integrate the database with the Next.js project.
+- [x]  Set up a database for storing user data and product information.
+- [x]  Integrate the database with the Next.js project.
 7.  **Implement Cart Functionality**
     
 - [ ]  Implement adding/removing items to/from the cart.

@@ -18,7 +18,7 @@ export const users = pgTable(
     id: serial('id').primaryKey(),
     name: text('name').notNull(),
     email: text('email').notNull(),
-    image: text('image').notNull(),
+    cart: text('cart'),
     createdAt: timestamp('createdAt').defaultNow().notNull(),
   },
   (users) => {
@@ -27,22 +27,6 @@ export const users = pgTable(
     };
   }
 );
-
-// export const tampons = pgTable(
-//   'tampons',
-//   {
-//     id: serial('id').primaryKey(),
-//     name: text('name').notNull(),
-//     email: text('email').notNull(),
-//     image: text('image').notNull(),
-//     createdAt: timestamp('createdAt').defaultNow().notNull(),
-//   },
-//   (users) => {
-//     return {
-//       uniqueIdx: uniqueIndex('unique_idx').on(users.email),
-//     };
-//   }
-// );
 
 export const getUsers = async () => {
   const users = await db.query.users.findMany();

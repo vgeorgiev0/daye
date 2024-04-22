@@ -16,6 +16,9 @@ export default async function Home() {
         <div key={ncNanoId()} className=''>
           <h1 className=''>{user.name}</h1>
           <p className=''>{user.email}</p>
+          {user.cart?.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
         </div>
       ))}
       {data?.map((item, index) => (
