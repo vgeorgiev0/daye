@@ -23,7 +23,7 @@ function Navbar() {
   });
 
   return (
-    <header className={`fixed left-0 top-0 z-99999 w-full font-poppins`}>
+    <header className={`fixed left-0 top-0 z-50 w-full font-poppins`}>
       <div
         className={`relative cursor-pointer flex w-full py-2 h-auto items-center justify-center bg-pink shadow-md transition-all duration-300 ${
           stickyMenu ? '-top-10' : 'top-0'

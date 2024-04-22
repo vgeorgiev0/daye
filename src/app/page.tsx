@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getDataFromApi } from './actions';
 import { getUsers } from '@/server/db';
 import { ncNanoId } from '@/lib/utils';
+import MainHero from '@/components/hero/MainHero';
 
 export const dynamic = 'force-dynamic';
 // Makes sure that the data is fetched at runtime
@@ -11,8 +12,9 @@ export default async function Home() {
   const users = await getUsers();
 
   return (
-    <main className='mt-10 lg:mt-32'>
-      {users.map((user) => (
+    <main className='mt-8 lg:mt-24'>
+      <MainHero />
+      {/* {users.map((user) => (
         <div key={ncNanoId()} className=''>
           <h1 className=''>{user.name}</h1>
           <p className=''>{user.email}</p>
@@ -32,7 +34,7 @@ export default async function Home() {
             height={1000}
           />
         </div>
-      ))}
+      ))} */}
     </main>
   );
 }
