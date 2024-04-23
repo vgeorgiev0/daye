@@ -40,7 +40,10 @@ const ProductListHeader: React.FC<ProductListHeaderProps> = ({
           <PopoverContent className='w-screen bg-background'>
             <ul className='flex flex-col w-full p-2 select-none'>
               {productList.map((product, index) => (
-                <li key={index} className='mb-3'>
+                <li
+                  key={index}
+                  className='mb-3 cursor-pointer font-poppins text-sm text-typography hover:opacity-60'
+                >
                   {product}
                 </li>
               ))}
