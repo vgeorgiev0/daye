@@ -1,6 +1,6 @@
 'use server';
 import { isXml } from '@/lib/utils';
-import { Tampons } from '@/types/tampons';
+import { TamponPack } from '@/types/tampons';
 import { xml2json } from 'xml-js';
 
 export async function getDataFromApi() {

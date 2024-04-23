@@ -1,4 +1,4 @@
-export interface Tampons {
+export interface TamponPack {
   price: number;
   currency: string;
   productImage: string;
