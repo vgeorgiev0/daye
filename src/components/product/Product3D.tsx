@@ -1,10 +1,6 @@
 'use client';
 import { TamponPack } from '@/types/tampons';
-import {
-  ContactShadows,
-  Environment,
-  PresentationControls,
-} from '@react-three/drei';
+import { ContactShadows, PresentationControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { memo } from 'react';
 import Tampon from '../3d/Tampon';
@@ -38,13 +34,13 @@ const Product3D: React.FC<ProductPageProps> = ({ pack }) => {
           config={{ mass: 2, tension: 500 }}
           snap={{ mass: 2, tension: 1500 }}
           rotation={[0, 0.3, 0]}
-          polar={[-Math.PI / 3, Math.PI / 3]}
+          polar={[-Math.PI / 2, Math.PI / 2]}
           azimuth={[-Math.PI / 1.4, Math.PI / 2]}
         >
           <Tampon
             pack={pack}
             rotation={[-Math.PI / 2, 0, 0]}
-            position={[-0.5, 0, 0]}
+            position={[-0.75, 0, 0]}
             scale={0.05}
           />
         </PresentationControls>
@@ -55,7 +51,6 @@ const Product3D: React.FC<ProductPageProps> = ({ pack }) => {
           blur={3}
           far={10}
         />
-        <Environment preset='studio' />
       </Canvas>
     </div>
   );

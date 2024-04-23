@@ -1,4 +1,5 @@
 export interface TamponPack {
+  id: string;
   price: number;
   currency: string;
   productImage: string;

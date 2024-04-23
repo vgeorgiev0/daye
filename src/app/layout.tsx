@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { Domine, Poppins, Saira } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import RecoilProvider from '@/providers/RecoilProvider';
 import Navbar from '@/components/nav/Navbar';
 import Footer from '@/components/footer/Footer';
 
@@ -48,11 +47,9 @@ export default function RootLayout({
             saira.variable
           )}
         >
-          <RecoilProvider>
-            <Navbar />
-            {children}
-            <Footer />
-          </RecoilProvider>
+          <Navbar />
+          {children}
+          <Footer />
         </body>
       </html>
     </ClerkProvider>

@@ -14,7 +14,7 @@
 - [x]  Create `Footer` component.
 - [x]  Create `product` page.
 - [x]  Create `Product` component.
-- [ ]  Create `Cart` component.
+- [x]  Create `Cart` component.
 3.  **Fetch Data**
     
 - [x]  Fetch product data from the provided API.
@@ -33,9 +33,9 @@
 - [x]  Integrate the database with the Next.js project.
 7.  **Implement Cart Functionality**
     
-- [ ]  Implement adding/removing items to/from the cart.
-- [ ]  Display the cart contents and total price.
-- [ ]  Persist cart data for each user.
+- [x]  Implement adding/removing items to/from the cart.
+- [x]  Display the cart contents and total price.
+- [x]  Persist cart data for each user.
 8.  **Deployment**
     
 - [x]  Deploy the application to Vercel.

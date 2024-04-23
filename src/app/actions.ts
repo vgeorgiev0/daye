@@ -1,5 +1,5 @@
 'use server';
-import { isXml } from '@/lib/utils';
+import { isXml, ncNanoId } from '@/lib/utils';
 import { TamponPack } from '@/types/tampons';
 import { xml2json } from 'xml-js';
 
@@ -50,7 +50,15 @@ export async function getDataFromApi() {
     //   }
     //   allProducts.push(currentProduct);
     // });
-    return dummyData;
+    return dummyData.map((product) => {
+      return {
+        id: ncNanoId('tampon-'),
+        price: product.price,
+        currency: product.currency,
+        productImage: product.productImage,
+        tampons: product.tampons,
+      };
+    });
   } catch (error) {
     console.error(
       `An error occurred while fetching data from the API. [${error}]`
