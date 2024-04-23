@@ -10,7 +10,6 @@ interface CartContentProps {
 }
 
 const CartContent: React.FC<CartContentProps> = ({ onClose }) => {
-  const [cart, setCart] = useState<TamponPack[]>([]);
   const [cartItems, setCartItems] = useLocalStorage<TamponPack[]>(
     'cartItems',
     []
@@ -20,24 +19,21 @@ const CartContent: React.FC<CartContentProps> = ({ onClose }) => {
     return cartItems.filter((item) => item.id === id).length;
   };
 
-  useEffect(() => {
-    const uniqueCartItems = cartItems.filter(
-      (item, index, self) =>
-        index ===
-        self.findIndex(
-          (t) =>
-            t.id === item.id &&
-            t.tampons.length === item.tampons.length &&
-            t.tampons.every(
-              (tampon, i) =>
-                tampon.amount === item.tampons[i].amount &&
-                tampon.size === item.tampons[i].size &&
-                tampon.coating === item.tampons[i].coating
-            )
-        )
-    );
-    setCart(uniqueCartItems);
-  }, [cartItems]);
+  const uniqueCartItems = cartItems.filter(
+    (item, index, self) =>
+      index ===
+      self.findIndex(
+        (t) =>
+          t.id === item.id &&
+          t.tampons.length === item.tampons.length &&
+          t.tampons.every(
+            (tampon, i) =>
+              tampon.amount === item.tampons[i].amount &&
+              tampon.size === item.tampons[i].size &&
+              tampon.coating === item.tampons[i].coating
+          )
+      )
+  );
 
   const removeItemFromCart = (id: string) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
@@ -60,7 +56,7 @@ const CartContent: React.FC<CartContentProps> = ({ onClose }) => {
           </div>
         ) : (
           <div className='flex flex-col gap-4'>
-            {cart.map((item, index) => (
+            {uniqueCartItems.map((item, index) => (
               <div key={index} className='flex flex-col gap-4 p-2'>
                 <div className='flex flex-row items-center justify-between'>
                   <h2 className='text-typography text-lg font-poppins'>

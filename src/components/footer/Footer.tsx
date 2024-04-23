@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className='flex items-center justify-center w-full bg-primary text-secondary px-24 py-10 text-center text-sm font-poppins'>
+        <div className='flex items-center justify-center w-full bg-primary text-secondary px-4 lg:px-24 py-10 text-center text-sm font-poppins'>
           <p>
             Daye tampons are manufactured in accordance with medical device
             standards, including ISO13485 and GMP. In order for a diagnosis to
