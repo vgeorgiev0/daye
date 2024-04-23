@@ -9,12 +9,11 @@
 - [x]  Create a 404 page.
 1.  **Create Components**
     
-- [ ]  Create `ProductList` component.
+- [x]  Create `ProductList` component.
 - [x]  Create `NavBar` component.
 - [x]  Create `Footer` component.
-- [ ]  Create `login` page.
-- [ ]  Create `product` page.
-- [ ]  Create `Product` component.
+- [x]  Create `product` page.
+- [x]  Create `Product` component.
 - [ ]  Create `Cart` component.
 3.  **Fetch Data**
     
@@ -22,7 +21,7 @@
 - [x]  Handle XML responses and parse them appropriately.
 4.  **Display Products**
     
-- [ ]  Display products fetched from the API.
+- [x]  Display products fetched from the API.
 - [ ]  Display dummy products (*nice-to-have -|- use a custom backend and fetch products from there).
 5.  **Implement User Authentication**
     
