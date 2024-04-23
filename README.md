@@ -6,6 +6,7 @@
 - [x]  Install necessary dependencies.
 - [x]  Set up typography and global styles.
 - [x]  Set up Recoil for state management.
+- [x]  Create a 404 page.
 1.  **Create Components**
     
 - [ ]  Create `ProductList` component.
