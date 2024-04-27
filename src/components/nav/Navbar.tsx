@@ -4,7 +4,7 @@ import { LogIn, SearchIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Cart from '../cart/Cart';
-import NavigationItem from './NavItem';
+import NavItem from './NavItem';
 import { NAVIGATION_SCREENS } from './menuData';
 
 function Navbar() {
@@ -41,7 +41,7 @@ function Navbar() {
         <ul className='hidden lg:flex mx-auto relative'>
           <div className='flex-1 flex flex-row items-center justify-center'>
             {NAVIGATION_SCREENS.slice(0, 4).map((item) => (
-              <NavigationItem key={item.id} menuItem={item} />
+              <NavItem stickyMenu={stickyMenu} key={item.id} menuItem={item} />
             ))}
           </div>
           <Link
@@ -52,7 +52,7 @@ function Navbar() {
           </Link>
           <div className='flex-1 flex flex-row items-center justify-center'>
             {NAVIGATION_SCREENS.slice(4).map((item) => (
-              <NavigationItem key={item.id} menuItem={item} />
+              <NavItem stickyMenu={stickyMenu} key={item.id} menuItem={item} />
             ))}
             <div className='flex flex-row space-x-2 ml-3 xl:space-x-6 xl:ml-10'>
               <SearchIcon className='cursor-pointer' />

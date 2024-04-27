@@ -28,11 +28,15 @@ export interface NavItemType {
 
 export interface NavigationItemProps {
   menuItem: NavItemType;
+  stickyMenu: boolean;
 }
 
 type NavigationItemWithRouterProps = NavigationItemProps;
 
-const NavigationItem: FC<NavigationItemWithRouterProps> = ({ menuItem }) => {
+const NavItem: FC<NavigationItemWithRouterProps> = ({
+  menuItem,
+  stickyMenu,
+}) => {
   const [menuCurrentHovers, setMenuCurrentHovers] = useState<string[]>([]);
 
   const locationPathName = usePathname();
@@ -77,11 +81,13 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({ menuItem }) => {
             >
               <Popover.Panel
                 static
-                className={`will-change-transform absolute top-full transform z-10 w-screen px-4 xl:-left-32 left-0`}
+                className={`will-change-transform absolute top-full transform z-10 w-screen px-4 xl:-left-72 left-0`}
               >
                 <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black dark:ring-white ring-opacity-5 dark:ring-opacity-10 text-sm'>
                   <div
-                    className={`absolute w-full flex flex-row items-center justify-evenly bg-background px-3 py-6 `}
+                    className={`absolute w-full flex flex-row items-center justify-evenly ${
+                      stickyMenu ? 'bg-foreground' : 'bg-background'
+                    } px-3 py-6 `}
                   >
                     {menu.megaMenu?.map((item) => (
                       <div key={item.id}>
@@ -154,4 +160,4 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({ menuItem }) => {
   }
 };
 
-export default NavigationItem;
+export default NavItem;

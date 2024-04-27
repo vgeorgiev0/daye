@@ -6,7 +6,7 @@ interface MainHeroProps {}
 
 const MainHero: React.FC<MainHeroProps> = ({}) => {
   return (
-    <div className='w-full relative h-screen z-10 bg-gradient-to-tr from-[#F5A8AE] via-foreground to-[#D7E9F5] '>
+    <div className='w-full relative h-max z-10 bg-gradient-to-tr from-[#F5A8AE] via-foreground to-[#D7E9F5] '>
       <div className='flex flex-col items-center text-center font-poppins h-full gap-3 pt-16'>
         <h1 className='text-2xl lg:text-4xl font-medium tracking-tight text-typography'>
           There’s a new wearable in town
@@ -26,7 +26,7 @@ const MainHero: React.FC<MainHeroProps> = ({}) => {
         alt='hero'
         width={560}
         height={400}
-        className='absolute bottom-0 left-0 right-0 mx-auto'
+        className='mx-auto'
       />
     </div>
   );
