@@ -34,7 +34,7 @@ const MobileNavItem: NavItemType[] = [
 
   {
     id: ncNanoId(),
-    name: 'User',
+    name: 'Profile',
     icon: LoginIcon,
   },
 

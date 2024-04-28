@@ -1,14 +1,17 @@
 'use client';
 import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
-import { LogIn, SearchIcon } from 'lucide-react';
+import { ArrowLeft, LogIn, SearchIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Cart from '../cart/Cart';
 import NavItem from './NavItem';
 import { NAVIGATION_SCREENS } from '@/constants/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 function Navbar() {
   const [stickyMenu, setStickyMenu] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -21,6 +24,12 @@ function Navbar() {
   useEffect(() => {
     window.addEventListener('scroll', handleStickyMenu);
   });
+
+  const navigateBack = () => {
+    if (pathname !== '/') {
+      router.back();
+    }
+  };
 
   return (
     <header className={`fixed left-0 top-0 z-50 w-full font-poppins`}>
@@ -75,10 +84,10 @@ function Navbar() {
           stickyMenu ? '-top-8 bg-foreground' : 'top-0 bg-background'
         } lg:hidden p-4 relative items-center transition-all justify-end`}
       >
-        <Link
-          href={'/'}
-          className='px-10 xl:px-24 flex-1 items-center justify-center flex'
-        >
+        {pathname !== '/' && (
+          <ArrowLeft className='absolute left-5 top-5' onClick={navigateBack} />
+        )}
+        <Link href={'/'} className=' flex-1 items-center justify-center flex'>
           <Logo />
         </Link>
       </div>
