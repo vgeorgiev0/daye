@@ -12,5 +12,25 @@ export interface CustomLink {
 export interface NavItemType {
   name: string;
   link?: string;
-  icon: any;
+  icon?: any;
+}
+
+export interface MegaMenuItem {
+  id: string;
+  image: string;
+  title: string;
+  items: NavItemType[];
+}
+
+export interface NavItemType {
+  id: string;
+  name: string;
+  href?: string;
+  mobile?: boolean;
+  highlight?: boolean;
+  isNew?: boolean;
+  targetBlank?: boolean;
+  children?: NavItemType[];
+  megaMenu?: MegaMenuItem[];
+  type?: 'megaMenu' | 'none';
 }
