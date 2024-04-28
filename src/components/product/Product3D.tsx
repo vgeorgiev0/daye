@@ -12,7 +12,11 @@ interface ProductPageProps {
 const Product3D: React.FC<ProductPageProps> = ({ pack }) => {
   return (
     <div className='w-full h-screen bg-secondary mt-24'>
-      <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
+      <Canvas
+        className='touch-none'
+        shadows
+        camera={{ position: [0, 0, 10], fov: 30 }}
+      >
         <ambientLight intensity={0.5} />
         <spotLight
           position={[10, 10, 10]}

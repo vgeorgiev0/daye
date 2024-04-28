@@ -15,7 +15,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
       {products?.map((product, index) => (
         <Link href={`/products/${index}`} key={index}>
           <CardContainer className='font-poppins'>
-            <CardBody className='bg-gradient-to-t from-primary via-background to-foreground relative group/card  border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
+            <CardBody className='bg-gradient-to-t from-primary/70 via-background/70 to-foreground/70 relative group/card  border-primary/20 w-auto sm:w-[30rem] h-auto rounded-xl p-6 border-2 shadow-lg hover:shadow-2xl transition-all shadow-primary hover:shadow-background'>
               <CardItem
                 translateZ='50'
                 className='text-xl font-bold text-typography '
