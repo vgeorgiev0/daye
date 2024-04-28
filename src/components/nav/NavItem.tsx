@@ -81,7 +81,7 @@ const NavItem: FC<NavigationItemWithRouterProps> = ({
             >
               <Popover.Panel
                 static
-                className={`will-change-transform absolute top-full transform z-10 w-screen px-4 xl:-left-72 left-0`}
+                className={`will-change-transform absolute top-full transform z-10 min-w-full pt-4 left-0`}
               >
                 <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black dark:ring-white ring-opacity-5 dark:ring-opacity-10 text-sm'>
                   <div

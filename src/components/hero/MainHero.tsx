@@ -7,7 +7,7 @@ interface MainHeroProps {}
 const MainHero: React.FC<MainHeroProps> = ({}) => {
   return (
     <div className='w-full relative h-max z-10 bg-gradient-to-tr from-[#F5A8AE] via-foreground to-[#D7E9F5] '>
-      <div className='flex flex-col items-center text-center font-poppins h-full gap-3 pt-16'>
+      <div className='flex flex-col items-center text-center font-poppins h-full gap-5 pt-16'>
         <h1 className='text-2xl lg:text-4xl font-medium tracking-tight text-typography'>
           There’s a new wearable in town
         </h1>
@@ -15,7 +15,7 @@ const MainHero: React.FC<MainHeroProps> = ({}) => {
           Bye-bye swabs, stirrups and speculums. Hello Diagnostic Tampon from
           Daye.
         </p>
-        <Button variant={'secondary'} className='rounded-sm'>
+        <Button variant={'secondary'} className='rounded-sm h-12 px-6'>
           ORDER YOUR STI SCREEN
         </Button>
       </div>

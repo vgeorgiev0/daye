@@ -73,7 +73,7 @@ function Navbar() {
       <div
         className={`flex ${
           stickyMenu ? '-top-8 bg-foreground' : 'top-0 bg-background'
-        } lg:hidden p-2 relative items-center transition-all justify-end`}
+        } lg:hidden p-4 relative items-center transition-all justify-end`}
       >
         <Link
           href={'/'}

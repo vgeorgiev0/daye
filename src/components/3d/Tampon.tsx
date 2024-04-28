@@ -3,7 +3,7 @@ import { TamponPack } from '@/types/tampons';
 import { Html, useGLTF } from '@react-three/drei';
 import { GroupProps } from '@react-three/fiber';
 import { ShoppingBasket } from 'lucide-react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import TamponList from './TamponList';
 import { useLocalStorage } from '@uidotdev/usehooks';
@@ -28,13 +28,14 @@ const Tampon: React.FC<TamponProps> = (props) => {
   return (
     <group {...props} dispose={null}>
       <mesh
+        // Using TS ignore because of the useGLTF hook
         //@ts-ignore
         geometry={nodes.mesh_0?.geometry}
         material={materials[0]}
       >
         <Html
-          zIndexRange={[40, 0]}
-          className='flex justify-center items-center bg-secondary p-4 rounded-md shadow-lg '
+          zIndexRange={[10, 0]}
+          className='flex justify-center items-center bg-secondary p-4 rounded-md shadow-2xl'
           scale={10}
           rotation={[Math.PI / 2, 0, 0]}
           position={[0, -30, 25]}
@@ -51,7 +52,7 @@ const Tampon: React.FC<TamponProps> = (props) => {
               tampons={pack?.tampons}
             />
             <Button
-              className='flex items-center justify-around font-poppins'
+              className='flex items-center justify-around font-poppins active:opacity-80 active:scale-95 transition-all'
               variant={'secondary'}
               onClick={() => {
                 pack && setCartItems((prev) => [...prev, pack]);
@@ -66,6 +67,7 @@ const Tampon: React.FC<TamponProps> = (props) => {
       <mesh
         castShadow
         receiveShadow
+        // Using TS ignore because of the useGLTF hook
         //@ts-ignore
         geometry={nodes.mesh_0.geometry}
         material={materials[0]}

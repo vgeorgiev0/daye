@@ -22,9 +22,9 @@ const Product3D: React.FC<ProductPageProps> = ({ pack }) => {
           castShadow
         />
         <spotLight
-          position={[20, 20, 20]}
+          position={[40, 40, 40]}
           angle={0.3}
-          penumbra={1}
+          penumbra={0.1}
           shadow-mapSize={2048}
           castShadow
         />
