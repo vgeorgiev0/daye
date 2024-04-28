@@ -6,6 +6,7 @@ import { FeaturedProductsList } from '@/components/product/FeaturedProductsList'
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { BackgroundGradientAnimation } from '@/components/ui/backgroundGradientAnimation';
+import Title from '@/components/ui/title';
 
 export default async function Home() {
   // const users = await getUsers();
@@ -16,11 +17,7 @@ export default async function Home() {
       <MainHero />
       <BackgroundGradientAnimation className='flex flex-col'>
         <Showcase products={products || []} />
-        <div className='bg-background/40 rounded-2xl shadow-xl flex items-center justify-center p-6 w-4/5 md:w-1/2 mb-8 '>
-          <h1 className='font-poppins text-xl lg:text-3xl font-bold text-typography select-none'>
-            Our Products
-          </h1>
-        </div>
+        <Title text='Our Products' />
         <FeaturedProductsList />
         <Link
           href='/products'
