@@ -35,7 +35,7 @@ const Tampon: React.FC<TamponProps> = (props) => {
       >
         <Html
           zIndexRange={[10, 0]}
-          className='flex justify-center items-center bg-secondary p-4 rounded-md shadow-2xl'
+          className='flex justify-center items-center bg-secondary p-4 rounded-md shadow-2xl touch-none'
           scale={10}
           rotation={[Math.PI / 2, 0, 0]}
           position={[0, -30, 25]}
