@@ -34,3 +34,10 @@ export interface NavItemType {
   megaMenu?: MegaMenuItem[];
   type?: 'megaMenu' | 'none';
 }
+
+export interface WhyDayeItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}

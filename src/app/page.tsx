@@ -1,12 +1,15 @@
 import MainHero from '@/components/hero/MainHero';
 import Showcase from '@/components/product/Showcase';
-import { getUsers } from '@/server/db';
+// import { getUsers } from '@/server/db';
 import { getDataFromApi } from './actions';
 import { FeaturedProductsList } from '@/components/product/FeaturedProductsList';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { BackgroundGradientAnimation } from '@/components/ui/backgroundGradientAnimation';
 import Title from '@/components/ui/title';
+import { Carousel } from '@/components/ui/carousel';
+import { AutoplayCarousel } from '@/components/shared/AutoplayCarousel';
+import { whyDayeItems } from '@/constants/whyDaye';
 
 export default async function Home() {
   // const users = await getUsers();
@@ -30,6 +33,10 @@ export default async function Home() {
             Explore all products
           </Button>
         </Link>
+        <div className='my-16 gap-8 flex flex-col w-full h-full items-center justify-center'>
+          <Title text='Why choose daye' />
+          <AutoplayCarousel carouselItems={whyDayeItems} />
+        </div>
       </BackgroundGradientAnimation>
     </main>
   );
