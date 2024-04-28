@@ -2,6 +2,8 @@ import { TamponPack } from '@/types/tampons';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { CardBody, CardContainer, CardItem } from '../3d/Card';
+import { Button } from '../ui/button';
 
 interface ProductListProps {
   products?: TamponPack[];
@@ -9,38 +11,73 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 w-full sm:w-1/2 md:w-3/4 gap-10 px-4 mb-16'>
+    <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 w-full mb-16 z-20 px-4'>
       {products?.map((product, index) => (
-        <div
-          key={index}
-          className='max-w-sm from-foreground to-primary via-background bg-gradient-to-t border shadow-md border-gray-200 rounded-md hover:shadow-lg transition duration-300 ease-in-out '
-        >
-          <Link href={`products/${index}`}>
-            <Image
-              className='rounded-t-lg'
-              src={product.productImage}
-              width={1024}
-              height={1024}
-              alt='product'
-            />
-          </Link>
-          <div className='p-5'>
-            <p className='mb-3 font-normal text-typography'>
-              This subscription contains the following products:
-            </p>
-            <ul className='ml-2'>
-              {product.tampons.map((tampon, index) => (
-                <li className='text-sm text-typography' key={index}>
-                  {tampon.amount} x {tampon.size} tampons | coating:{' '}
-                  {tampon.coating}{' '}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <h5 className='mb-2 ml-2 text-sm font-light font-domine tracking-tight text-typography/60'>
-            {product.price} {product.currency}
-          </h5>
-        </div>
+        <Link href={`/products/${index}`} key={index}>
+          <CardContainer className='font-poppins'>
+            <CardBody className='bg-gradient-to-t from-primary via-background to-foreground relative group/card  border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
+              <CardItem
+                translateZ='50'
+                className='text-xl font-bold text-typography '
+              >
+                Tampon subscription
+              </CardItem>
+              <CardItem
+                as='p'
+                translateZ='60'
+                className='text-typography text-sm max-w-sm mt-2 '
+              >
+                This tampon subscription includes a variety of tampons to suit
+                your needs.
+              </CardItem>
+              <CardItem translateZ='100' className='w-full mt-4'>
+                <Image
+                  src={product.productImage}
+                  height='1000'
+                  width='1000'
+                  className='h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl'
+                  alt='thumbnail'
+                />
+              </CardItem>
+              <CardItem
+                as='div'
+                translateZ='60'
+                className={
+                  'text-typography/70 flex flex-col text-sm max-w-sm mt-6 h-10'
+                }
+              >
+                {product.tampons.map((tampon, index) => (
+                  <span key={index}>
+                    {tampon.amount} {tampon.size} tampons{' '}
+                    {tampon.coating !== 'none'
+                      ? `with ${tampon.coating} coating`
+                      : 'without coating'}
+                  </span>
+                ))}
+              </CardItem>
+              <CardItem
+                as='div'
+                translateZ='60'
+                className='text-typography flex flex-row items-center gap-2 w-full text-sm max-w-sm mt-6 '
+              >
+                <span className='font-domine'>
+                  {product.price}
+                  {product.currency}
+                </span>
+                <span className='text-xs text-typography/70'>per month*</span>
+              </CardItem>
+              <CardItem
+                as='div'
+                translateZ='60'
+                className='text-typography flex items-center justify-end w-full text-sm max-w-sm mt-6 '
+              >
+                <Button variant='link' className='uppercase text-typography'>
+                  Details
+                </Button>
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+        </Link>
       ))}
     </div>
   );
