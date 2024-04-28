@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Cart from '../cart/Cart';
 import NavItem from './NavItem';
-import { NAVIGATION_SCREENS } from './menuData';
+import { NAVIGATION_SCREENS } from '@/constants/navigation';
 
 function Navbar() {
   const [stickyMenu, setStickyMenu] = useState(false);

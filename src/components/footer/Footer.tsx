@@ -4,11 +4,11 @@ import { CustomLink } from '@/types/common';
 import React from 'react';
 import FooterMenuItem from './FooterMenuItem';
 import FooterNav from './FooterNav';
-import __footerMenuItems from './footerMenuItems.json';
 import Image from 'next/image';
 import logo from '@/assets/logo.svg';
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
+import { footerMenuItems } from '@/constants/footer';
 
 export interface WidgetFooterMenu {
   id: string;
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className='flex flex-row gap-16 font-poppins'>
-            {__footerMenuItems.map((item, index) =>
+            {footerMenuItems.map((item, index) =>
               FooterMenuItem({ index, menu: item })
             )}
           </div>

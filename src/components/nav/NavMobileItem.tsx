@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavItemType } from './NavItem';
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import { ChevronDownIcon } from 'lucide-react';
 import NavMobileMenuChild from './NavMobileMenuChild';
+import { NavItemType } from '@/types/common';
 
 interface NavMobileItemProps {
   item: NavItemType;

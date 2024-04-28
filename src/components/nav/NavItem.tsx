@@ -1,30 +1,12 @@
 'use client';
 
+import { NavItemType } from '@/types/common';
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC, Fragment, useEffect, useState } from 'react';
-
-export interface MegaMenuItem {
-  id: string;
-  image: string;
-  title: string;
-  items: NavItemType[];
-}
-export interface NavItemType {
-  id: string;
-  name: string;
-  href: string;
-  mobile?: boolean;
-  highlight?: boolean;
-  isNew?: boolean;
-  targetBlank?: boolean;
-  children?: NavItemType[];
-  megaMenu?: MegaMenuItem[];
-  type?: 'megaMenu' | 'none';
-}
 
 export interface NavigationItemProps {
   menuItem: NavItemType;
@@ -106,7 +88,7 @@ const NavItem: FC<NavigationItemWithRouterProps> = ({
                           {item.title}
                         </p>
                         <ul className='grid space-y-1'>
-                          {item.items.map(renderMegaMenuNavlink)}
+                          {item.items.map(renderMegaMenuNavLink)}
                         </ul>
                       </div>
                     ))}
@@ -120,7 +102,7 @@ const NavItem: FC<NavigationItemWithRouterProps> = ({
     );
   };
 
-  const renderMegaMenuNavlink = (item: NavItemType) => {
+  const renderMegaMenuNavLink = (item: NavItemType) => {
     return (
       <li key={item.id}>
         <Link

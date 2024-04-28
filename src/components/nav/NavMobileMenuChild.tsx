@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavItemType } from './NavItem';
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import { ChevronDownIcon } from 'lucide-react';
+import { NavItemType } from '@/types/common';
 
 interface NavMobileMenuChildProps {
   item: NavItemType;
@@ -12,7 +12,7 @@ const NavMobileMenuChild: React.FC<NavMobileMenuChildProps> = ({ item }) => {
   return (
     <ul className='pl-6 pb-1 text-base'>
       {item.children?.map((i, index) => (
-        <Disclosure key={i.href + index} as='li'>
+        <Disclosure key={i.id} as='li'>
           <Link
             href={{
               pathname: i.href || undefined,

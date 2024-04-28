@@ -7,6 +7,7 @@ import { HomeIcon, UserIcon } from 'lucide-react';
 import { useRef } from 'react';
 import Cart from '../cart/Cart';
 import FooterNavItem from './FooterNavItem';
+import { ncNanoId } from '@/lib/utils';
 
 const LoginIcon = () => {
   return (
@@ -26,20 +27,24 @@ const LoginIcon = () => {
 const MobileNavItem: NavItemType[] = [
   {
     name: 'Explore',
+    id: ncNanoId(),
     link: '/',
     icon: HomeIcon,
   },
 
   {
+    id: ncNanoId(),
     name: 'User',
     icon: LoginIcon,
   },
 
   {
+    id: ncNanoId(),
     name: 'Cart',
     icon: Cart,
   },
   {
+    id: ncNanoId(),
     name: 'Menu',
     icon: MenuBar,
   },

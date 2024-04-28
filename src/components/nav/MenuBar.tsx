@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import SideMenuContainer from '../shared/SideMenuContainer';
 import NavMobile from './NavMobile';
-import { NAVIGATION_SCREENS } from './menuData';
+import { NAVIGATION_SCREENS } from '@/constants/navigation';
 
 export interface MenuBarProps {
   className?: string;
