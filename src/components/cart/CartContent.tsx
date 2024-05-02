@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import ButtonClose from '../ui/shared/ButtonClose';
-import { useLocalStorage } from '@uidotdev/usehooks';
+'use client';
 import { TamponPack } from '@/types/tampons';
-import { Button } from '../ui/button';
+import { useLocalStorage } from '@uidotdev/usehooks';
 import Image from 'next/image';
+import React from 'react';
+import { Button } from '../ui/button';
+import ButtonClose from '../ui/shared/ButtonClose';
 
 interface CartContentProps {
   onClose?: () => void;

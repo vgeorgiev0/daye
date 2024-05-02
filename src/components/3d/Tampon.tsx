@@ -2,11 +2,11 @@
 import { TamponPack } from '@/types/tampons';
 import { Html, useGLTF } from '@react-three/drei';
 import { GroupProps } from '@react-three/fiber';
+import { useLocalStorage } from '@uidotdev/usehooks';
 import { ShoppingBasket } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Button } from '../ui/button';
 import TamponList from './TamponList';
-import { useLocalStorage } from '@uidotdev/usehooks';
 
 interface TamponProps extends GroupProps {
   pack: TamponPack | null;
