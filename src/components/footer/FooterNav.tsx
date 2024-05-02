@@ -40,7 +40,7 @@ const MobileNavItem: NavItemType[] = [
 
   {
     id: ncNanoId(),
-    name: 'Cart',
+    name: 'Basket',
     icon: Cart,
   },
   {
