@@ -45,7 +45,7 @@
 9. **SEO Optimization**
 - [x]  Create a dynamic sitemap.
 - [ ]  Implement meta tags for each page.
-- [ ]  Optimize images and other assets.
-- [ ]  Create a robots.txt file.
-- [ ]  Render pages on the server for better SEO.
+- [x]  Optimize images and other assets.
+- [x]  Create a robots.txt file.
+- [x]  Render pages on the server for better SEO.
  
