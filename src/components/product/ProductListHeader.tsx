@@ -3,7 +3,8 @@ import React from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { ArrowDown } from 'lucide-react';
 import { TamponPack } from '@/types/tampons';
-import { ProductCategories } from '@/app/products/page';
+import { ProductCategories } from '@/types/common';
+
 
 interface ProductListHeaderProps {
   productCategories: ProductCategories[];

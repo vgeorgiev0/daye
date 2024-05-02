@@ -10,24 +10,19 @@ interface ProductPageProps {
   };
 }
 export async function generateStaticParams() {
-  const products: TamponPack[] | undefined = await getDataFromApi();
+  const products: TamponPack[] = (await getDataFromApi()) ?? [];
   return products?.map((product) => ({
     id: product.id,
   }));
 }
 
-export async function generateMetadata(
-  { params }: ProductPageProps,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  // read route params
+export async function generateMetadata({
+  params,
+}: ProductPageProps): Promise<Metadata> {
   const id = params.id;
-
-  // fetch data
   const products = await getDataFromApi();
 
   const product = products?.find((product) => product.id === id);
-  // optionally access and extend (rather than replace) parent metadata
 
   return {
     title: `${product?.tampons.reduce(

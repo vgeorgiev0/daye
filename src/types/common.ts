@@ -41,3 +41,9 @@ export interface WhyDayeItem {
   description: string;
   image: string;
 }
+
+export enum ProductCategories {
+  ALL = 'All Products',
+  COATED = 'CBD Tampons',
+  NON_COATED = 'Nude Tampons',
+}

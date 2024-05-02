@@ -2,12 +2,9 @@ import ProductList from '@/components/product/ProductList';
 import ProductListHeader from '@/components/product/ProductListHeader';
 import React from 'react';
 import { getDataFromApi } from '../actions';
+import { ProductCategories } from '@/types/common';
 
-export enum ProductCategories {
-  ALL = 'All Products',
-  COATED = 'CBD Tampons',
-  NON_COATED = 'Nude Tampons',
-}
+
 const productCategories: ProductCategories[] = [
   ProductCategories.ALL,
   ProductCategories.COATED,
