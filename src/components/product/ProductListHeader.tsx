@@ -18,7 +18,7 @@ const ProductListHeader: React.FC<ProductListHeaderProps> = ({
   products,
   coatedCount,
   nonCoatedCount,
-  selectedCategory,
+  selectedCategory = ProductCategories.ALL,
 }) => {
   return (
     <>
