@@ -22,7 +22,8 @@
 4.  **Display Products**
     
 - [x]  Display products fetched from the API.
-- [ ]  Display dummy products (*nice-to-have -|- use a custom backend and fetch products from there).
+- [-]  Display dummy products (*nice-to-have -|- use a custom backend and fetch products from there).
+- [x]  Implement product filtering.
 5.  **Implement User Authentication**
     
 - [x]  Integrate user authentication using Clerk.
