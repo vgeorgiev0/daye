@@ -5,7 +5,6 @@
 - [x]  Set up project structure.
 - [x]  Install necessary dependencies.
 - [x]  Set up typography and global styles.
-- [x]  Set up Recoil for state management.
 - [x]  Create a 404 page.
 1.  **Create Components**
     
@@ -44,7 +43,7 @@
 
 9. **SEO Optimization**
 - [x]  Create a dynamic sitemap.
-- [ ]  Implement meta tags for each page.
+- [x]  Implement meta tags for each page.
 - [x]  Optimize images and other assets.
 - [x]  Create a robots.txt file.
 - [x]  Render pages on the server for better SEO.
