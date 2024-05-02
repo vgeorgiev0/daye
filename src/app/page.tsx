@@ -33,7 +33,7 @@ export default async function Home() {
             Explore all products
           </Button>
         </Link>
-        <div className='my-16 gap-8 flex flex-col w-full h-full items-center justify-center'>
+        <div className='my-16 gap-8 flex flex-col w-full h-full items-center justify-center px-4'>
           <Title text='Why choose daye' />
           <AutoplayCarousel carouselItems={whyDayeItems} />
         </div>
