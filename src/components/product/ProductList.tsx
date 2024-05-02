@@ -12,8 +12,8 @@ interface ProductListProps {
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
     <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 w-full mb-16 z-20 px-4'>
-      {products?.map((product, index) => (
-        <Link href={`/products/${index}`} key={index}>
+      {products?.map((product) => (
+        <Link href={`/products/${product.id}`} key={product.id}>
           <CardContainer className='font-poppins'>
             <CardBody className='bg-gradient-to-t from-primary/70 via-background/70 to-foreground/70 relative group/card  border-primary/20 w-auto sm:w-[30rem] h-auto rounded-xl p-6 border-2 shadow-lg hover:shadow-2xl transition-all shadow-primary hover:shadow-background'>
               <CardItem

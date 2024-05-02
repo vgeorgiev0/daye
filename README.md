@@ -43,7 +43,7 @@
 - [x]  Set up CI/CD pipeline.
 
 9. **SEO Optimization**
-- [ ]  Create a dynamic sitemap.
+- [x]  Create a dynamic sitemap.
 - [ ]  Implement meta tags for each page.
 - [ ]  Optimize images and other assets.
 - [ ]  Create a robots.txt file.

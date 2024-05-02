@@ -1,5 +1,5 @@
 'use server';
-import { isXml, ncNanoId } from '@/lib/utils';
+import { isXml } from '@/lib/utils';
 import { TamponPack } from '@/types/tampons';
 import { xml2json } from 'xml-js';
 
@@ -48,7 +48,8 @@ export async function getDataFromApi() {
           currentProduct.productImage = product[key];
         }
       }
-      currentProduct.id = ncNanoId(); // Generate a unique ID for the current product
+      const id = data.indexOf(product);
+      currentProduct.id = id.toString();
       allProducts.push(currentProduct);
     });
     return allProducts;
@@ -58,104 +59,3 @@ export async function getDataFromApi() {
     );
   }
 }
-
-const dummyData = [
-  {
-    price: 19,
-    currency: 'GBP',
-    productImage:
-      'https://daye.cdn.prismic.io/daye/ee153f6163435330b18495535217c531300382a8_product2x.png',
-    tampons: [
-      {
-        size: 'regular',
-        coating: 'none',
-        amount: 8,
-      },
-      {
-        size: 'regular',
-        coating: 'CBD',
-        amount: 4,
-      },
-    ],
-  },
-  {
-    price: 18,
-    currency: 'GBP',
-    productImage:
-      'https://daye.cdn.prismic.io/daye/ee153f6163435330b18495535217c531300382a8_product2x.png',
-    tampons: [
-      {
-        size: 'regular',
-        coating: 'none',
-        amount: 10,
-      },
-      {
-        size: 'regular',
-        coating: 'CBD',
-        amount: 2,
-      },
-    ],
-  },
-  {
-    price: 19,
-    currency: 'GBP',
-    productImage:
-      'https://daye.cdn.prismic.io/daye/ee153f6163435330b18495535217c531300382a8_product2x.png',
-    tampons: [
-      {
-        size: 'small',
-        coating: 'none',
-        amount: 8,
-      },
-      {
-        size: 'small',
-        coating: 'CBD',
-        amount: 4,
-      },
-    ],
-  },
-  {
-    price: 18,
-    currency: 'GBP',
-    productImage:
-      'https://daye.cdn.prismic.io/daye/ee153f6163435330b18495535217c531300382a8_product2x.png',
-    tampons: [
-      {
-        size: 'small',
-        coating: 'none',
-        amount: 10,
-      },
-      {
-        size: 'small',
-        coating: 'CBD',
-        amount: 2,
-      },
-    ],
-  },
-  {
-    price: 17,
-    currency: 'GBP',
-    productImage:
-      'https://daye.cdn.prismic.io/daye/ee153f6163435330b18495535217c531300382a8_product2x.png',
-    tampons: [
-      {
-        size: 'regular',
-        coating: 'none',
-        amount: 12,
-      },
-    ],
-  },
-  {
-    price: 17,
-    currency: 'GBP',
-    productImage:
-      'https://daye.cdn.prismic.io/daye/ee153f6163435330b18495535217c531300382a8_product2x.png',
-    tampons: [
-      {
-        size: 'small',
-        coating: 'none',
-        amount: 12,
-      },
-    ],
-  },
-];
