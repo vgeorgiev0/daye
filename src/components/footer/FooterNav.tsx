@@ -56,10 +56,10 @@ const FooterNav = () => {
   return (
     <div
       ref={containerRef}
-      className='block lg:!hidden p-2 bg-background fixed top-auto bottom-0 inset-x-0 z-30 border-t border-neutral-300
-      transition-transform duration-300 ease-in-out'
+      className="block lg:!hidden p-2 bg-background fixed top-auto bottom-0 pb-4 inset-x-0 z-30 border-t border-neutral-300
+      transition-transform duration-300 ease-in-out"
     >
-      <div className='w-full max-w-lg flex justify-around mx-auto text-sm text-center '>
+      <div className="w-full max-w-lg flex justify-around mx-auto text-sm text-center ">
         {MobileNavItem.map((item, index) => FooterNavItem({ index, item }))}
       </div>
     </div>
